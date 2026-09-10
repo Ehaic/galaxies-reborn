@@ -67,22 +67,6 @@
           "description": "Core3 Pre-CU emulator. Requires retail client .tre files supplied by the operator."
         }
       ]
-    },
-    {
-      "id": "swg-source",
-      "displayName": "SWG Source",
-      "description": "Unmodified upstream SWGSource. The baseline Galaxies Reborn forks from.",
-      "path": "swg-source",
-      "available": true,
-      "flavors": [],
-      "variants": [
-        {
-          "id": "base",
-          "displayName": "SWG Source Base",
-          "manifest": "channels/swg-source/base.json",
-          "description": "Upstream server and client sources pinned to a known-good revision of master."
-        }
-      ]
     }
   ]
 }

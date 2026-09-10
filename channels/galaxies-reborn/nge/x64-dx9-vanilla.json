@@ -8,7 +8,7 @@
   "branch": "x64-dx9-vanilla",
   "pipeline": "swgSource",
   "renderer": "dx9",
-  "description": "SWG Source x64 DirectX 9 regular and God clients with matching server revisions.",
+  "description": "Galaxies Reborn x64 DirectX 9 regular and God clients with matching server revisions.",
   "publishedAt": "2026-07-11T00:00:00Z",
   "server": {
     "rootDirectory": "server",

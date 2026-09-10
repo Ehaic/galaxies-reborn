@@ -1,7 +1,7 @@
 # SWGEmu
 
 [SWGEmu](https://www.swgemu.com/) Core3 — an independent Pre-CU emulator, reverse
-engineered from scratch. It shares no code with SWGSource.
+engineered from scratch. It is an independent implementation.
 
 | Variant | Submodule | Branch |
 | --- | --- | --- |

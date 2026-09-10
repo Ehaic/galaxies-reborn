@@ -14,10 +14,8 @@ choosing one project never downloads another's content.
 | --- | --- | --- |
 | Galaxies Reborn | `galaxies-reborn/` | Galaxies Reborn source sets, grouped by era. |
 | SWGEmu | `swgemu/` | [SWGEmu](https://www.swgemu.com/) Core3, an independent Pre-CU emulator with its own container stack. |
-| SWG Source | `swg-source/` | Unmodified upstream [SWGSource](https://github.com/SWG-Source). The baseline Galaxies Reborn forks from. |
 
-Galaxies Reborn groups its variants under era flavors. SWGEmu and SWG Source
-offer their variants directly, so their folders are one level shallower. A
+Galaxies Reborn groups its variants under era flavors. SWGEmu offers its variants directly, so their folders are one level shallower. A
 project uses one shape or the other, never both.
 
 | Project | Flavor | Variant | Renderer | Branch | Status |
@@ -27,7 +25,6 @@ project uses one shape or the other, never both.
 | Galaxies Reborn | CU | — | — | — | Not published |
 | Galaxies Reborn | Pre-CU | — | — | — | Not published |
 | SWGEmu | — | `core3` | — | `unstable` | Available |
-| SWG Source | — | `base` | — | `master` | Available |
 
 ## Renderers
 
@@ -37,7 +34,7 @@ apply across NGE, CU, and Pre-CU — so it is a declared facet, not another fold
 level. The launcher offers a renderer picker only where an era publishes more
 than one, and filters the variant list by it.
 
-Projects that are not renderer specific, such as SWGEmu and SWG Source, leave it
+Projects that are not renderer specific, such as SWGEmu, leave it
 unset and get no picker.
 
 A variant may be listed before it exists, with `"available": false` and an empty
@@ -77,7 +74,6 @@ uninitialized by default.
 | --- | --- | --- |
 | `galaxies-reborn/nge/x64-dx9-vanilla` | ~216 MB | ~582 MB |
 | `swgemu/core3` | ~503 MB | ~503 MB |
-| `swg-source/base` | ~216 MB | ~562 MB |
 
 ## Pipelines
 
@@ -86,20 +82,15 @@ pipeline that can drive it:
 
 | Pipeline | Used by | Stack |
 | --- | --- | --- |
-| `swgSource` | Galaxies Reborn, SWG Source | swg-main with Oracle and the Compose stack. |
+| `swgSource` | Galaxies Reborn | swg-main with Oracle and the Compose stack. |
 | `core3` | SWGEmu | Core3's own Dockerfile, MySQL, and CMake build. |
 
 ## Submodule Wiring
 
-Variant submodules track the branch of the same name. `swg-main` carries its own
-`.gitmodules`; on `x64-dx9-vanilla` it resolves `stationapi` and `src` to the
-Galaxies Reborn forks, while `dsrc`, `serverdata`, and `exe` (`configs`) resolve
-to SWG-Source upstream. Those nested revisions are pinned by `swg-main` itself,
-not by this repository, so recursive initialization is required.
-
-The NGE variant is the SWG Source baseline with Galaxies Reborn forks
-substituted for `src` and `stationapi`; every other pinned revision, including
-`client-assets`, is currently identical between the two.
+Variant submodules are pinned to exact revisions. Every Galaxies Reborn source
+dependency, including nested `swg-main` submodules, resolves to the
+Galaxies-Reborn organization. Recursive initialization is required for server
+source. Contributions and updates belong in the Galaxies-Reborn repositories.
 
 ## Client Payloads
 
