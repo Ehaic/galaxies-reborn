@@ -20,8 +20,7 @@ project uses one shape or the other, never both.
 
 | Project | Flavor | Variant | Renderer | Branch | Status |
 | --- | --- | --- | --- | --- | --- |
-| Galaxies Reborn | NGE | `x64-dx9-vanilla` | DX9 | `x64-dx9-vanilla` | Available |
-| Galaxies Reborn | NGE | `x64-dx11-vanilla` | DX11 | — | Not published |
+| Galaxies Reborn | NGE | `x64-dx11-vanilla` | DX11 | `main` | Available |
 | Galaxies Reborn | CU | — | — | — | Not published |
 | Galaxies Reborn | Pre-CU | — | — | — | Not published |
 | SWGEmu | — | `core3` | — | `unstable` | Available |
@@ -59,8 +58,8 @@ Clone the umbrella, then initialize only the variant you want:
 ```bash
 git clone https://github.com/Galaxies-Reborn/galaxies-reborn.git
 cd galaxies-reborn
-git -c core.longpaths=true submodule update --init --recursive galaxies-reborn/nge/x64-dx9-vanilla/swg-main
-git -c core.longpaths=true submodule update --init galaxies-reborn/nge/x64-dx9-vanilla/client-assets
+git -c core.longpaths=true submodule update --init --recursive galaxies-reborn/nge/x64-dx11-vanilla/swg-main
+git -c core.longpaths=true submodule update --init galaxies-reborn/nge/x64-dx11-vanilla/client-assets
 ```
 
 `core.longpaths=true` is required on Windows. Nested submodule object paths
@@ -72,7 +71,7 @@ uninitialized by default.
 
 | Variant | Required | With optional |
 | --- | --- | --- |
-| `galaxies-reborn/nge/x64-dx9-vanilla` | ~216 MB | ~582 MB |
+| `galaxies-reborn/nge/x64-dx11-vanilla` | ~216 MB | ~582 MB |
 | `swgemu/core3` | ~503 MB | ~503 MB |
 
 ## Pipelines
@@ -111,6 +110,10 @@ rather than carrying placeholder paths. SWGEmu additionally requires retail
 Advancing a variant is a submodule pointer update:
 
 ```bash
-git submodule update --remote galaxies-reborn/nge/x64-dx9-vanilla/swg-main
-git commit -am "Advance NGE x64-dx9-vanilla swg-main"
+git submodule update --remote galaxies-reborn/nge/x64-dx11-vanilla/swg-main
+git commit -am "Advance NGE x64-dx11-vanilla swg-main"
 ```
+
+## Maintained branches
+
+See [BRANCHES.md](BRANCHES.md) for main, entertainer, Pre-CU, and web-dashboard policy.
