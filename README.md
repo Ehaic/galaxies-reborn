@@ -81,7 +81,7 @@ pipeline that can drive it:
 
 | Pipeline | Used by | Stack |
 | --- | --- | --- |
-| `swgSource` | Galaxies Reborn | swg-main with Oracle and the Compose stack. |
+| Galaxies Reborn server | Galaxies Reborn | swg-main with Oracle and the Compose stack. |
 | `core3` | SWGEmu | Core3's own Dockerfile, MySQL, and CMake build. |
 
 ## Submodule Wiring
