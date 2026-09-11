@@ -117,3 +117,7 @@ git commit -am "Advance NGE x64-dx11-vanilla swg-main"
 ## Maintained branches
 
 See [BRANCHES.md](BRANCHES.md) for main, entertainer, Pre-CU, and web-dashboard policy.
+
+## Galaxies Reborn community
+
+Join the [Galaxies Reborn Discord](https://discord.gg/CEwKVvKxK5) for project discussion, support, and announcements.
