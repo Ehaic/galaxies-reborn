@@ -1,16 +1,16 @@
 [submodule "galaxies-reborn/nge/x64-dx11-vanilla/swg-main"]
 	path = galaxies-reborn/nge/x64-dx11-vanilla/swg-main
-	url = https://github.com/Galaxies-Reborn/swg-main.git
-	branch = main
+	url = https://github.com/Ehaic/swg-main.git
+	branch = experiment-galaxies-reborn
 [submodule "galaxies-reborn/nge/x64-dx11-vanilla/client-assets"]
 	path = galaxies-reborn/nge/x64-dx11-vanilla/client-assets
-	url = https://github.com/Galaxies-Reborn/client-assets.git
-	branch = main
+	url = https://github.com/Ehaic/client-assets.git
+	branch = experiment-galaxies-reborn
 [submodule "galaxies-reborn/nge/x64-dx11-vanilla/client-tools"]
 	path = galaxies-reborn/nge/x64-dx11-vanilla/client-tools
-	url = https://github.com/Galaxies-Reborn/client-tools.git
-	branch = main
+	url = https://github.com/Ehaic/client-tools.git
+	branch = experiment-galaxies-reborn
 [submodule "swgemu/core3/Core3"]
 	path = swgemu/core3/Core3
-	url = https://github.com/swgemu/Core3.git
-	branch = unstable
+	url = https://github.com/Ehaic/Core3.git
+	branch = experiment-galaxies-reborn
